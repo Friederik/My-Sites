@@ -20,15 +20,19 @@ h1 {
 
 h2 {
     font-size: 1.8em;
+    margin: 0;
     color: #636467;
 }
 
 section {
-    margin: 20px;
+    margin: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
     padding: 20px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: justify;
 }
 
 footer {
@@ -38,15 +42,30 @@ footer {
     color: white;
 }
 
+p {
+    text-indent: 20px;
+    word-wrap: break-word;
+}
+
 a {
     color: #636467;
     text-decoration: none;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    
+}
+
+li {
+    list-style-type: none;
+}
+
 .under-header {
     padding: 5px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 30%;
+    margin-right: 30%;
     color: white;
     border-radius: 5px;
     border-left: 10px solid #636467;
