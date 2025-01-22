@@ -1,0 +1,43 @@
+body {
+    padding: 0;
+    margin: 0;
+    
+}
+
+.container {
+    
+    color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/keep-out.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn {
+    font: 600 50px "Times New Roman";
+    color: wheat;
+    background-color: chocolate;
+    border-color: brown;
+    border-style: solid;
+    border-radius: 25px;
+    border-width: 2px;
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    gap: 40px;
+}
+

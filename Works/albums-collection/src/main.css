@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    color: azure;
+    font-size: medium;
+    
+    background-color: black;
+    background-image: url("images/fire.gif");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 30% 25%;
+}
+
+h1 {
+    text-shadow: 0.06em 0.03em orange;
+    font-size: 4em;
+    text-align: center;
+    padding: 0.3em;
+}
+  
+.container {
+    padding: 0 16em;
+}
+
+.pages ul {
+    padding: 2em;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+}
+
+.pages ul li a {
+    background-color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 3px solid orange;
+    padding: 0.1em 0.7em;
+    color: orange;
+    font-size: 3em;
+    font-weight: 800;
+    
+}
+
+.pages ul li {
+    transition: transform 0.2s;
+}
+
+.pages ul li:hover {
+    transform: scale(1.2);
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Автоматически подстраивается под экран */
+    gap: 15px; /* Отступы между картинками */
+    padding: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}

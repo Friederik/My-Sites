@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: azure;
+    font-size: 16px;
+    height: 100vh;
+    background-color: black;
+}
+
+h1 {
+    text-shadow: 0.06em 0.03em orange;
+    font-size: 4em;
+    padding: 0.3em;
+}
+
+.container {
+    padding: 0 16em;
+}
+
+header ul{
+    padding: 2em;
+    display: flex;
+    list-style-type: none;
+}
+
+header ul li a {
+    background-color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 3px solid orange;
+    padding: 0.1em 0.7em;
+    color: orange;
+    font-size: 3em;
+    font-weight: 800;
+    position: relative;
+    top: 0.6em;
+}
