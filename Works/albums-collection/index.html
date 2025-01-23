@@ -4,23 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/main.css">
-    <link rel="shortcut icon" href="src/images/fire.gif" type="image/x-icon">
+    <link rel="shortcut icon" href="src/images/icon.png" type="image/x-icon">
+    <script src="src\join-albums.js"></script>
     <title>Albums Collection</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>OnlyGoodMusicAlbums.com</h1>
+        <h1 id="name">OnlyGoodMusicAlbums.com</h1>
       </header>
-      <div id="imageGrid" class="image-grid">
-        <script src="src\join-albums.js"></script>
-      </div>
+      <div id="imageGrid" class="image-grid"></div>
     </div>
     <nav class="pages">
       <ul>
-        <li><a href="#">&lt;</a></li>
-        <li><a href="#">&gt;</a></li>
+        <li id="previous-page">&lt;</li>
+        <li id="page-number">1</li>
+        <li id="next-page">&gt;</li>
       </ul>
     </nav>  
+    <dialog id="details">
+      <div>
+        <span id="close">X</span>
+      </div>
+    </dialog>
   </body>
 </html>

@@ -4,13 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    color: azure;
-    font-size: 16px;
-    height: 100vh;
-    background-color: black;
-}
-
 h1 {
     text-shadow: 0.06em 0.03em orange;
     font-size: 4em;
@@ -19,6 +12,10 @@ h1 {
 
 .container {
     padding: 0 16em;
+    color: azure;
+    font-size: 16px;
+    height: 100vh;
+    background-color: black;
 }
 
 header ul{
@@ -39,3 +36,4 @@ header ul li a {
     position: relative;
     top: 0.6em;
 }
+

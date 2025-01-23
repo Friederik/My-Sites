@@ -1,39 +1,107 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Массив с путями к изображениям (можно загрузить с сервера или с другого источника)
-    const imagePaths = [
-        'src/covers/Gorillaz.jpg',
-        'src/covers/Grin.jpg',
-        'src/covers/Hold Your Colour.jpg',
-        'src/covers/Leviathan.jpg',
-        'src/covers/Nonagon Infinity.jpg',
-        'src/covers/Roots.jpg',
-        'src/covers/Rust In Peace.jpg',
-        'src/covers/Significant Other.jpg',
-        'src/covers/Slipknot.jpg',
-        'src/covers/System of a Down.jpg',
-        'src/covers/The Fat of the Land.jpg',
-        'src/covers/This Does Not Exist.jpg',
-        'src/covers/Vulgar Display of Power.jpg',
-        'src/covers/Wlfgrl.jpg',
-        'src/covers/Река Крови.jpg',
-        'src/covers/Сто лет одиночества.jpg',
-        'src/covers/Театръ Демона.jpg',
-        'src/covers/Цвет времени.jpg',
-        // Добавьте сюда больше путей к картинкам
-    ];
+    fetch('src/data.json')
+    .then(response => response.json())
+    .then(data => { 
+        const albums = data["albums"];
+        console.log(albums);
 
-    const imageGrid = document.getElementById('imageGrid');
+        const imageGrid = document.getElementById('imageGrid');
+        const dialog = document.getElementById('details');
+        const nextPage = document.getElementById('next-page');
+        const previousPage = document.getElementById('previous-page');
+        const closePage = document.getElementById('close');
+        let numberOfPage = 1;
 
-    // Для каждого пути изображения создаем элемент img и добавляем его в сетку
-    imagePaths.forEach(path => {
-        const imgElement = document.createElement('img');
-        const anchor = document.createElement('a');
-        anchor.href = 'src/album-pages/album-page.html'
-        imgElement.src = path;
-        imgElement.alt = 'Image';
+        for (let i = numberOfPage; i < numberOfPage+6; i++) {
+            const imgElement = document.createElement('img');
 
-        anchor.appendChild(imgElement);
-        imageGrid.appendChild(anchor);
-    });
+            imgElement.id = `show-details-${i}`;
+            imgElement.className = "imgElement";
+            imgElement.src = albums[i]["coverPath"];
+            imgElement.alt = albums[i]["name"];
+    
+            imgAddEvent(imgElement, dialog, albums[i]);
+            imageGrid.appendChild(imgElement);
+        }
+
+        nextPage.addEventListener('click', function() {
+            if (numberOfPage < albums.length-6) {
+                for (let i = numberOfPage; i < numberOfPage+6; i++) {
+                    if (i >= albums.length) 
+                        document.getElementById(`filler-${i}`).remove();
+                    else document.getElementById(`show-details-${i}`).remove();
+                }
+    
+                numberOfPage += 6;
+                renderImg(imageGrid, dialog, albums, numberOfPage);
+                document.getElementById('page-number').innerText = (numberOfPage-1)/6+1;
+            }
+            console.log(numberOfPage);
+        });
+        previousPage.addEventListener('click', function() {
+            if (numberOfPage > 1) {
+                for (let i = numberOfPage; i < numberOfPage+6; i++) {
+                    if (i >= albums.length) 
+                        document.getElementById(`filler-${i}`).remove();
+                    else document.getElementById(`show-details-${i}`).remove();
+                }
+
+                numberOfPage -= 6;
+                renderImg(imageGrid, dialog, albums, numberOfPage);
+                document.getElementById('page-number').innerText = (numberOfPage-1)/6+1;
+            }
+            console.log(numberOfPage);
+        });
+
+        closePage.addEventListener('click', function() {
+            dialog.close();
+            document.getElementById('album-info').remove();
+        });
+  });
 });
+
+function renderImg(imageGrid, dialog, albums, numberOfPage) {
+    for (let i = numberOfPage; i < numberOfPage+6; i++) {
+        let imgElement = document.createElement('img');
+        if (i >= albums.length) {
+            imgElement.id = `filler-${i}`;
+            imgElement.className = "fillerElement";
+            imgElement.src = albums[0]["coverPath"];
+            imgElement.alt = albums[0]["name"];
+        }
+        else {
+            imgElement.id = `show-details-${i}`;
+            imgElement.className = "imgElement";
+            imgElement.src = albums[i]["coverPath"];
+            imgElement.alt = albums[i]["name"];
+    
+            imgAddEvent(imgElement, dialog, albums[i]);
+        }
+        imageGrid.appendChild(imgElement);
+    }
+}
+
+function imgAddEvent(imgElement, dialog, album) {
+    imgElement.addEventListener('click', function() {
+        let div = document.createElement('div');
+        let nameH1 =  document.createElement('h1');
+        let authorH1 =  document.createElement('h1');
+        let about = document.createElement('p'); 
+        
+        div.id = "album-info";
+        nameH1.innerText = album["name"];
+        authorH1.innerText = album["author"];
+        about.innerText = album["about"];
+        
+        div.append(imgElement.cloneNode(true), nameH1, authorH1, about);
+        album["songs"].forEach(songName => {
+            let song = document.createElement('p');
+            song.innerText = songName;
+            div.appendChild(song);
+        });
+        
+        
+        dialog.appendChild(div);
+        dialog.showModal();
+    });
+}

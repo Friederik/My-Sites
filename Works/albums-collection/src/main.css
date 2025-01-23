@@ -5,9 +5,10 @@
 }
   
 body {
+    width: 100vw;
+    height: 100vh;
     color: azure;
     font-size: medium;
-    
     background-color: black;
     background-image: url("images/fire.gif");
     background-repeat: repeat-x;
@@ -15,7 +16,8 @@ body {
     background-size: 30% 25%;
 }
 
-h1 {
+#name {
+    user-select: none;
     text-shadow: 0.06em 0.03em orange;
     font-size: 4em;
     text-align: center;
@@ -24,6 +26,7 @@ h1 {
   
 .container {
     padding: 0 16em;
+    justify-items: center;
 }
 
 .pages ul {
@@ -34,7 +37,8 @@ h1 {
     gap: 4em;
 }
 
-.pages ul li a {
+.pages ul li {
+    user-select: none;
     background-color: black;
     text-decoration: none;
     border-radius: 25px;
@@ -43,34 +47,85 @@ h1 {
     color: orange;
     font-size: 3em;
     font-weight: 800;
-    
 }
 
-.pages ul li {
-    transition: transform 0.2s;
+.pages ul li:not(#page-number):active {
+    transform: scale(0.95);
 }
 
-.pages ul li:hover {
-    transform: scale(1.2);
+.pages ul li:not(#page-number):hover {
+    cursor: pointer;
+}
+
+.pages ul li #page-number :hover {
+    cursor: none;
 }
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Автоматически подстраивается под экран */
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Автоматически подстраивается под экран */
     gap: 15px; /* Отступы между картинками */
     padding: 10px;
 }
 
 .image-grid img {
+    user-select: none;
     width: 100%;
-    height: auto;
+    height: minmax(100px, 200px);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.image-grid img:hover {
+.image-grid img:not(.fillerElement):hover {
     transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+}
+
+#details {
+    background: linear-gradient(0deg, black, chocolate);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-width: 7px;
+    border-bottom: 0px;
+    border-color: bisque;
+    border-style:groove;
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    height: 90%;
+    opacity: 0.95;
+}
+
+#details:focus {
+    outline: none;
+}
+
+#details div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#close {
+    user-select: none;
+    margin: 5px;
+    width: 40px;
+    height: auto;
+    text-align: center;
+    border-radius: 5px;
+    background-color: black;
+    color: beige;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#close:active {
+    transform: scale(0.95);
+}
+
+#album-info {
+    flex-direction: column;
 }

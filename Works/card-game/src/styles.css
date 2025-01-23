@@ -1,11 +1,10 @@
 body {
     padding: 0;
     margin: 0;
-    
+
 }
 
 .container {
-    
     color: black;
     height: 100vh;
     display: flex;
@@ -41,3 +40,9 @@ body {
     gap: 40px;
 }
 
+#myd {
+    border-width: 0px;
+    width: 75vw;
+    height: 75vh;
+    text-align: center;
+}

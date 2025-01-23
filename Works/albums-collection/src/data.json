@@ -1,7 +1,408 @@
 {
     "albums": [
         {
-            
+            "name": "Unkown",
+            "coverPath": "src/covers/Unknown.png",
+            "songs": [
+                "No Title"
+            ]
+        },
+
+        {
+            "name": "Gorillaz",
+            "author": "Gorillaz",
+            "coverPath": "src/covers/Gorillaz.jpg",
+            "about": "Альтернативный рок,трип-хоп, арт-рок, альтернативный хип-хоп, панк-рок, рэп-рок",
+            "songs": [
+                "Re-Hash", 
+                "5/4",
+                "Tomorrow Comes Today",
+                "New Genious (Brother)",
+                "Clint Eastwood",
+                "Man Research (Clapper)",
+                "Punk",
+                "Sound Check (Gravity)",
+                "Double Bass",
+                "Rock the House",
+                "19-2000",
+                "Latin Simone (¿Que Pasa Contigo?)",
+                "Starshine",
+                "Slow Country",
+                "M1 A1",
+                "Clint Eastwood (Ed Case Re-Fix)"
+            ]
+        },
+
+        {
+            "name": "Grin",
+            "coverPath": "src/covers/Grin.jpg",
+            "songs": [
+                "Dream Path",
+                "The Lethargic Age",
+                "Internal Conflicts",
+                "Caveat (To the Coming)",
+                "Serpent Moves",
+                "Status: Still Thinking",
+                "Theme for Silence",
+                "Paralyzed, Mesmerized",
+                "Grin (Nails Hurt)",
+                "Host"
+            ]
+        },
+        
+        {
+            "name": "Hold Your Colour",
+            "coverPath": "src/covers/Hold Your Colour.jpg",
+            "songs": [
+                "Prelude",
+                "Slam",
+                "Plasticworld",
+                "Fasten Your Seatbelt",
+                "Through the Loop",
+                "Sounds of Life",
+                "Girl in the Fire",
+                "Tarantula",
+                "Out Here",
+                "Hold Your Colour",
+                "The Terminal",
+                "Streamline",
+                "Another Planet",
+                "Still Grey",
+                "Blood Sugar",
+                "Axle Grinder"
+            ]
+        },
+
+        {
+            "name": "Leviathan",
+            "coverPath": "src/covers/Leviathan.jpg",
+            "songs": [
+                "Blood and Thunder",
+                "I Am Ahab",
+                "Seabeast",
+                "Ísland",
+                "Iron Tusk",
+                "Megalodon",
+                "Naked Burn",
+                "Aqua Dementia",
+                "Hearts Alive",
+                "Joseph Merrick"
+            ]
+        },
+
+        {
+            "name": "Nonagon Infinity",
+            "coverPath": "src/covers/Nonagon Infinity.jpg",
+            "songs": [
+                "Robot Stop",
+                "Big Fig Wasp",
+                "Gamma Knife",
+                "People-Vultures",
+                "Mr. Beat",
+                "Evil Death Roll",
+                "Invisible Face",
+                "Wah Wah",
+                "Road Train"
+            ]
+        },
+
+        {
+            "name": "Roots",
+            "coverPath": "src/covers/Roots.jpg",
+            "songs": [
+                "Roots Bloody Roots",
+                "Attitude",
+                "Cut-Throat",
+                "Ratamahatta",
+                "Breed Apart",
+                "Straighthate",
+                "Spit",
+                "Lookaway",
+                "Dusted",
+                "Born Stubborn",
+                "Jasco",
+                "Itsári",
+                "Ambush",
+                "Endangered Species",
+                "Dictatorshit",
+                "Canyon Jam»"
+                
+            ]
+        },
+
+        {
+            "name": "Rust In Peace",
+            "coverPath": "src/covers/Rust In Peace.jpg",
+            "songs": [
+                "Holy Wars… The Punishment Due",
+                "Hangar 18",
+                "Take No Prisoners",
+                "Five Magics",
+                "Poison Was the Cure",
+                "Lucretia",
+                "Tornado of Souls",
+                "Dawn Patrol»",
+                "Rust in Peace... Polaris"
+            ]
+        },
+
+        {
+            "name": "Significant Other",
+            "coverPath": "src/covers/Significant Other.jpg",
+            "songs": [
+                "Intro",
+                "Just Like This",
+                "Nookie",
+                "Break Stuff",
+                "Re-Arranged",
+                "I'm Broke",
+                "Nobody Like You",
+                "Don't Go Off Wandering",
+                "9 Teen 90 Nine",
+                "N 2 Gether Now",
+                "Trust?",
+                "No Sex",
+                "Show Me What You Got",
+                "A Lesson Learned",
+                "Outro"
+            ]
+        },
+
+        {
+            "name": "Slipknot",
+            "coverPath": "src/covers/Slipknot.jpg",
+            "songs": [
+                "742617000027",
+                "(sic)",
+                "Eyeless",
+                "Wait and Bleed",
+                "Surfacing",
+                "Spit It Out",
+                "Tattered & Torn",
+                "Frail Limb Nursery",
+                "Purity",
+                "Liberate",
+                "Prosthetics",
+                "No Life",
+                "Diluted",
+                "Only One",
+                "Scissors"
+            ]
+        },
+
+        {
+            "name": "System of a Down",
+            "coverPath": "src/covers/System of a Down.jpg",
+            "songs": [
+                "Suite-Pee",
+                "Know",
+                "Sugar",
+                "Suggestions",
+                "Spiders",
+                "DDevil",
+                "Soil",
+                "War?",
+                "Mind",
+                "Peephole",
+                "CUBErt",
+                "Darts",
+                "P.L.U.C.K."
+            ]
+        },
+
+        {
+            "name": "The Fat of the Land",
+            "coverPath": "src/covers/The Fat of the Land.jpg",
+            "songs": [
+                "Smack My Bitch Up",
+                "Breathe",
+                "Diesel Power",
+                "Funky Shit",
+                "Serial Thrilla",
+                "Mindfields",
+                "Narayan",
+                "Firestarter",
+                "Climbatize",
+                "Fuel My Fire"
+            ]
+        },
+
+        {
+            "name": "This Does Not Exist",
+            "coverPath": "src/covers/This Does Not Exist.jpg",
+            "songs": [
+                "rap music",
+                "GOOD MOURNING!",
+                "COMPOSITION III IN RED, WHITE, AND BLACK",
+                "MOVE BECAUSE YOU CAN",
+                "THE PAINT WALKIN",
+                "I AM ADDICTED TO DRUGS AND TIRED OF I",
+                "where is darkie",
+                "BLOOD MONE",
+                "THE SANDS OF TIM",
+                "EGO DEAT",
+                "COMPOSITION X",
+                "I AM GONNA STOP DOING DRUG",
+                "wrap music"
+            ]
+        },
+
+        {
+            "name": "Vulgar Display of Power",
+            "coverPath": "src/covers/Vulgar Display of Power.jpg",
+            "songs": [
+                "Mouth for War",
+                "A New Level",
+                "Walk",
+                "Fucking Hostile",
+                "This Love",
+                "Rise",
+                "No Good (Attack the Radical)",
+                "Live in a Hole",
+                "Regular People (Conceit)",
+                "By Demons Be Driven",
+                "Hollow"
+            ]
+        },
+
+        {
+            "name": "Wlfgrl",
+            "coverPath": "src/covers/Wlfgrl.jpg",
+            "songs": [
+                "MG1",
+                "Ionic Funk (20XX Battle Music)",
+                "Krystle (URL Cyber Palace Mix)",
+                "Ginger Claps",
+                "Ghost",
+                "Frenesi (Machine Girl GabberTrap Mix)",
+                "Out By 16, Dead on the Scene",
+                "Post Rave Maximalist",
+                "Phase Alpha",
+                "Freewill",
+                "Excruciating Deth",
+                "Hidden Power",
+                "MG2"
+            ]
+        },
+
+        {
+            "name": "Река Крови",
+            "coverPath": "src/covers/Река Крови.jpg",
+            "songs": [
+                "Интро",
+                "Разговоры о напасах",
+                "Биография",
+                "Бакланы",
+                "Теряю голову",
+                "Жесть",
+                "Белый ягуар",
+                "Пурга",
+                "Гидропон (Дунул)"
+            ]
+        },
+
+        {
+            "name": "Сто лет одиночества",
+            "coverPath": "src/covers/Сто лет одиночества.jpg",
+            "songs": [
+                "Свобода",
+                "Евангелие",
+                "Глина научит",
+                "Дрызг и брызг",
+                "Вечная весна",	 
+                "Привыкать",
+                "Зерно на мельницу",
+                "Всё ли понарошку",
+                "Зря вы это всё",
+                "Офелия",
+                "Передозировка",
+                "Простор открыт",
+                "Будьте здоровы (Живите богато)",
+                "Как-то утром на рассвете",
+                "ТуманАлександр Колкер",
+                "В начале было слово",
+                "Семь шагов за горизонт",
+                "Семь шагов за горизонт, часть 2",
+                "Следы на снегу",
+                "Поживём — увидим",
+                "Сто лет одиночества",
+                "О отшествии преподобнаго в пустыню от славы человеческия"
+            ]
+        },
+
+        {
+            "name": "Театръ Демона",
+            "coverPath": "src/covers/Театръ Демона.jpg",
+            "songs": [
+                "Послание",
+                "Театральный демон",
+                "Киногерой",
+                "Фокусник",
+                "Танец злобного гения",
+                "Энди Кауфман",
+                "Мадам Жоржетт",
+                "Бунтарь",
+                "Тёмный учитель",
+                "Король вечного сна",
+                "Бал лицемеров",
+                "Защитники"
+            ]
+        },
+
+        {
+            "name": "Цвет времени",
+            "coverPath": "src/covers/Цвет времени.jpg",
+            "songs": [
+                "Шрамы",
+                "Уходи если хочешь",
+                "Вечеринка",
+                "Гориллаз",
+                "День отца",
+                "Связаны",
+                "Тебя",
+                "Ненависть"
+            ]
+        },
+
+        {
+            "name": "Music For The Jilted Generation",
+            "coverPath": "src/covers/Music For The Jilted Generation.jpg",
+            "songs": [
+                "Intro",
+                "Break & Enter",
+                "Their Law",
+                "Full Throttle",
+                "Voodoo People",
+                "Speedway (Theme From Fastlane)",
+                "The Heat (The Energy)",
+                "Poison",
+                "No Good (Start the Dance)",
+                "One Love (Edit)",
+                "The Narcotic Suite: 3 Kilos",
+                "The Narcotic Suite: Skylined",
+                "The Narcotic Suite: Claustrophobic Sting"
+            ]
+        },
+
+        {
+            "name": "Vol. 3 The Subliminal Verses",
+            "coverPath": "src/covers/Vol. 3 The Subliminal Verses.jpg",
+            "songs": [
+                "Prelude 3.0",
+                "The Blister Exists",
+                "Three Nil",
+                "Duality",
+                "Opium of the People",
+                "Circle",
+                "Welcome",
+                "Vermilion",
+                "Pulse of the Maggots",
+                "Before I Forget",
+                "Vermilion Pt. 2",
+                "The Nameless",
+                "The Virus of Life",
+                "Danger - Keep Away"
+            ]
         }
     ]
 }
