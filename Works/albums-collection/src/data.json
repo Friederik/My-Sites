@@ -12,7 +12,7 @@
             "name": "Gorillaz",
             "author": "Gorillaz",
             "coverPath": "src/covers/Gorillaz.jpg",
-            "about": "Альтернативный рок,трип-хоп, арт-рок, альтернативный хип-хоп, панк-рок, рэп-рок",
+            "about": "Альтернативный рок, Трип-хоп, Арт-рок, Альтернативный хип-хоп, Панк-рок, Рэп-рок",
             "songs": [
                 "Re-Hash", 
                 "5/4",
@@ -35,7 +35,9 @@
 
         {
             "name": "Grin",
+            "author": "Coroner",
             "coverPath": "src/covers/Grin.jpg",
+            "about": "Трэш-метал, Авангардный метал, Индастриал-метал, Эмбиент",
             "songs": [
                 "Dream Path",
                 "The Lethargic Age",
@@ -52,7 +54,9 @@
         
         {
             "name": "Hold Your Colour",
+            "author": "Pendulum",
             "coverPath": "src/covers/Hold Your Colour.jpg",
+            "about": "Драм-н-бейс, Электронная танцевальная музыка",
             "songs": [
                 "Prelude",
                 "Slam",
@@ -75,7 +79,9 @@
 
         {
             "name": "Leviathan",
+            "author": "Mastodon",
             "coverPath": "src/covers/Leviathan.jpg",
+            "about": "Хеви-метал, Сладж-метал, Трэш-метал",
             "songs": [
                 "Blood and Thunder",
                 "I Am Ahab",
@@ -92,7 +98,9 @@
 
         {
             "name": "Nonagon Infinity",
+            "author": "King Gizzard & the Lizard Wizard",
             "coverPath": "src/covers/Nonagon Infinity.jpg",
+            "about": "Гаражный рок, психоделический рок, прогрессивный рок, экспериментальный рок",
             "songs": [
                 "Robot Stop",
                 "Big Fig Wasp",
@@ -108,7 +116,9 @@
 
         {
             "name": "Roots",
+            "author": "Sepultura",
             "coverPath": "src/covers/Roots.jpg",
+            "about": "Хеви-метал, Трэш-метал, Ню-метал, Дэт-метал",
             "songs": [
                 "Roots Bloody Roots",
                 "Attitude",
@@ -132,7 +142,9 @@
 
         {
             "name": "Rust In Peace",
+            "author": "Megadeth",
             "coverPath": "src/covers/Rust In Peace.jpg",
+            "about": "Трэш-метал",
             "songs": [
                 "Holy Wars… The Punishment Due",
                 "Hangar 18",
@@ -148,7 +160,9 @@
 
         {
             "name": "Significant Other",
+            "author": "Limp Bizkit",
             "coverPath": "src/covers/Significant Other.jpg",
+            "about": "Ню-метал, Рэп-метал, Рэп-рок",
             "songs": [
                 "Intro",
                 "Just Like This",
@@ -170,7 +184,9 @@
 
         {
             "name": "Slipknot",
+            "author": "Slipknot",
             "coverPath": "src/covers/Slipknot.jpg",
+            "about": "Ню-метал",
             "songs": [
                 "742617000027",
                 "(sic)",
@@ -192,7 +208,9 @@
 
         {
             "name": "System of a Down",
+            "author": "System of a Down",
             "coverPath": "src/covers/System of a Down.jpg",
+            "about": "Альтернативный метал, Ню-метал",
             "songs": [
                 "Suite-Pee",
                 "Know",
@@ -212,7 +230,9 @@
 
         {
             "name": "The Fat of the Land",
+            "author": "The Prodigy",
             "coverPath": "src/covers/The Fat of the Land.jpg",
+            "about": "Бигбит, Электропанк, Электроник-рок",
             "songs": [
                 "Smack My Bitch Up",
                 "Breathe",
@@ -229,7 +249,9 @@
 
         {
             "name": "This Does Not Exist",
+            "author": "Lil Darkie",
             "coverPath": "src/covers/This Does Not Exist.jpg",
+            "about": "Альтернативная музыка/инди, Хип-хоп/рэп, Фолк",
             "songs": [
                 "rap music",
                 "GOOD MOURNING!",
@@ -249,7 +271,9 @@
 
         {
             "name": "Vulgar Display of Power",
+            "author": "Pantera",
             "coverPath": "src/covers/Vulgar Display of Power.jpg",
+            "about": "Грув-метал, Трэш-метал",
             "songs": [
                 "Mouth for War",
                 "A New Level",
@@ -267,7 +291,9 @@
 
         {
             "name": "Wlfgrl",
+            "author": "Machine Girl",
             "coverPath": "src/covers/Wlfgrl.jpg",
+            "about": "Танцевальная/электронная музыка",
             "songs": [
                 "MG1",
                 "Ionic Funk (20XX Battle Music)",
@@ -287,7 +313,9 @@
 
         {
             "name": "Река Крови",
+            "author": "Кровосток",
             "coverPath": "src/covers/Река Крови.jpg",
+            "about": "Абстрактный хип-хоп, Гангста-рэп, Хардкор-хип-хоп, Комедийный хип-хоп",
             "songs": [
                 "Интро",
                 "Разговоры о напасах",
@@ -303,7 +331,9 @@
 
         {
             "name": "Сто лет одиночества",
+            "author": "Егор и Опизденевшие",
             "coverPath": "src/covers/Сто лет одиночества.jpg",
+            "about": "Психоделический рок, Постпанк, Гаражный рок, Экспериментальный рок, Нойз-рок",
             "songs": [
                 "Свобода",
                 "Евангелие",
@@ -351,7 +381,9 @@
 
         {
             "name": "Цвет времени",
+            "author": "Король и Шут",
             "coverPath": "src/covers/Цвет времени.jpg",
+            "about": "Арт-рок, Фолк-панк, Арт-панк",
             "songs": [
                 "Шрамы",
                 "Уходи если хочешь",
@@ -366,7 +398,9 @@
 
         {
             "name": "Music For The Jilted Generation",
+            "author": "The Prodigy",
             "coverPath": "src/covers/Music For The Jilted Generation.jpg",
+            "about": "Драм-н-бейс, Брейкбит-хардкор, Техно, Хардкор-техно, Олдскул-джангл",
             "songs": [
                 "Intro",
                 "Break & Enter",
@@ -386,7 +420,9 @@
 
         {
             "name": "Vol. 3 The Subliminal Verses",
+            "author": "Slipknot",
             "coverPath": "src/covers/Vol. 3 The Subliminal Verses.jpg",
+            "about": "Ню-метал, Альтернативный метал",
             "songs": [
                 "Prelude 3.0",
                 "The Blister Exists",
