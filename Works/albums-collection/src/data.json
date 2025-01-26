@@ -441,6 +441,28 @@
                 "The Virus of Life",
                 "Danger - Keep Away"
             ]
+        },
+
+        {
+            "name": "Lateralus",
+            "author": "Tool",
+            "coverPath": "src/covers/Tool.jpg",
+            "about": "Арт-рок, Прогрессивный рок, Прогрессивный метал",
+            "songs": [
+                "The Grudge",
+                "Eon Blue Apocalypse",
+                "The Patient",
+                "Mantra",
+                "Schism",
+                "Parabol",
+                "Parabola",
+                "Ticks & Leeches",
+                "Lateralus",
+                "Disposition",
+                "Reflection»",
+                "Triad",
+                "Faaip de Oiad"
+            ]
         }
     ]
 }
