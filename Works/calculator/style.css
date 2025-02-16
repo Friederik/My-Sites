@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    padding-top: 5rem;
+    height: 100vh;
+    background-color: white;
+}
+
+.wrapper-dark {
+    padding-top: 5rem;
+    height: 100vh;
+    background-color: black;
+}
+
+.calculator {
+    padding: 0.1rem;
+    margin: auto;
+    width: 25rem;
+    background-color: gray;
+}
+
+.calculator-dark {
+    padding: 0.1rem;
+    margin: auto;
+    width: 25rem;
+    background-color:midnightblue;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;  
+    padding: 1rem 2rem;  
+}
+
+.input {
+    height: 2rem;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+}
+
+.input-dark {
+    height: 2rem;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    background-color: black;
+    color: aliceblue;
+}
+
+.operations {
+    margin: 2rem;
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    user-select: none
+}
+
+.btn {
+    height: 3rem;
+    margin: 0.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+}
+
+.btn-dark {
+    height: 3rem;
+    margin: 0.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    background-color: black;
+    color: aliceblue;
+}
+
+.settings {
+    position: absolute;
+    top:1rem;
+    left: 1rem;
+}
+
+.settings-dark {
+    position: absolute;
+    top:1rem;
+    left: 1rem;
+    color: aliceblue;
+}

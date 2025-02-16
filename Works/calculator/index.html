@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="calculator.png">
+    <script src="main.js" defer></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="calculator">
+            <div class="display" id="display">
+                <input class="input" type="text" id="expression" disabled>
+                <input class="input" type="text" id="number" disabled>   
+            </div>
+            <div class="operations" id="operations">
+                <button class="btn" onclick="memorySave()">MS</button> 
+                <button class="btn" onclick="memoryRead()">MR</button> 
+                <button class="btn" onclick="restart()">CE</button> 
+                <button class="btn" onclick="erase()">⌫</button> 
+        
+                <button class="btn" onclick="changeNumber('1/x')">1/x</button> <!---->
+                <button class="btn" onclick="changeNumber('x²')">x²</button> <!---->
+                <button class="btn" onclick="changeNumber('√x')">√x</button> <!---->
+                <button class="btn" onclick="setOperation('÷')">÷</button> <!---->
+    
+                <button class="btn" onclick="addNumber(7)">7</button> 
+                <button class="btn" onclick="addNumber(8)">8</button>
+                <button class="btn" onclick="addNumber(9)">9</button>
+                <button class="btn" onclick="setOperation('×')">×</button> <!---->
+    
+                <button class="btn" onclick="addNumber(4)">4</button>
+                <button class="btn" onclick="addNumber(5)">5</button>
+                <button class="btn" onclick="addNumber(6)">6</button>
+                <button class="btn" onclick="setOperation('-')">-</button> <!---->
+    
+                <button class="btn" onclick="addNumber(1)">1</button>
+                <button class="btn" onclick="addNumber(2)">2</button>
+                <button class="btn" onclick="addNumber(3)">3</button>
+                <button class="btn" onclick="setOperation('+')">+</button> <!---->
+    
+                <button class="btn" onclick="changeMinus()">±</button>
+                <button class="btn" onclick="addNumber(0)">0</button>
+                <button class="btn" onclick="setPoint()">.</button>
+                <button class="btn" onclick="equals()">=</button> <!---->
+            </div>
+        </div>
+        <div class="settings">
+            <label for="theme">Темная тема</label>
+            <input type="checkbox" onclick="themeChange()" id="theme">
+        </div>
+    </div>  
+</body>
+</html>

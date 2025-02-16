@@ -1,18 +1,24 @@
 {
-    "albums": [
+    "cards": [
         {
-            "name": "Sneak",
-            "coverPath": "images/sneak.jpg",
-            "songs": [
-                "Song 1",
-                "Song 2",
-                "Song 3",
-                "Song 4",
-                "Song 5",
-                "Song 6",
-                "Song 7",
-                "Song 8"
-            ]
+            "name": "Dog",
+            "portraitPath": "src/images/dog.jpg",
+            "attack": 25
+        },
+        {
+            "name": "Dear",
+            "portraitPath": "src/images/dear.jpg",
+            "attack": 15
+        },
+        {
+            "name": "Rabbit",
+            "portraitPath": "src/images/rabbit.jpg",
+            "attack": 1
+        },
+        {
+            "name": "Croco",
+            "portraitPath": "src/images/croco.jpg",
+            "attack": 100
         }
     ]
 }

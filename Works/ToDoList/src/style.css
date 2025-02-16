@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.tasks {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.input {
+    width: 15rem;
+    margin: auto;
+}
+
+.add-task {
+    width: 15rem;
+    margin: auto;
+}
+
+.list {
+    padding: 4rem;
+    margin: auto;
+}
+
+.task {
+    background-color: gainsboro;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 5px;
+    width: 15rem;
+    display: flex;
+}
+
+.completed-task {
+    background-color: burlywood;
+    color: aliceblue;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 5px;
+    width: 15rem;
+    display: flex;
+}
+
+p {
+    width: 13rem;
+}
+
+button {
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+}

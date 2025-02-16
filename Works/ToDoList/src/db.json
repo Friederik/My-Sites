@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    {
+      "id": "14a7",
+      "text": "Купить дум",
+      "completed": "false"
+    },
+    {
+      "id": "bd6e",
+      "text": "поучиться",
+      "completed": "true"
+    }
+  ]
+}
