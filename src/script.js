@@ -1,8 +1,8 @@
 const projects = [
     "Works/albums-collection/index.html",
     "Works/card-game/index.html",
-    "Works/Portal-Site/index.html",
-    "Works/verstka1/index.html"
+    "Works/calculator/index.html",
+    "Works/ToDoList/index.html"
 ]
 const works = document.getElementById('works');
 
