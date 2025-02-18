@@ -1,0 +1,1 @@
+import * as Main from "/scripts/main.js"

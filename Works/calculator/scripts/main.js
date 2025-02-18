@@ -7,17 +7,16 @@ let numberValue = ''
 let expressionValue = ''
 let memory = ''
 let isCalc = false
+let isNewNum = false
 
 function addNumber(num) {
     if (expressionValue.slice(-1) === '=') {
         numberValue = ''
         expressionValue = ''
     }
-    if ((expressionValue.slice(-1) === '÷' ||
-    expressionValue.slice(-1) === '×' ||
-    expressionValue.slice(-1) === '-' ||
-    expressionValue.slice(-1) === '+') && isCalc) {
+    if (isNewNum) {
         numberValue = ''
+        isNewNum = false
     }
     if (numberValue === '0') {
         numberValue = String(num)    
@@ -48,6 +47,7 @@ function equals() {
         rounded()
     }
     isCalc = false
+    rounded()
     updateNumber()
 }
 
@@ -88,7 +88,7 @@ function changeNumber(operation) {
             numberValue = String(Math.sqrt(Number(numberValue)))
             break
     }
-    rounded()
+    isNewNum = true
     updateNumber()
     expressionValue = curExpressionValue
 }
@@ -110,7 +110,7 @@ function setOperation(operation) {
         expressionValue = numberValue + ` ${operation}`
     }
     isCalc = true
-    rounded()
+    isNewNum = true 
     updateNumber()
 }
 
@@ -211,5 +211,39 @@ function themeChange() {
         }    
     }
 }
+
+document.addEventListener("keydown", function (event) {
+    let key = event.key;
+
+    console.log(key)
+    if (!isNaN(key)) {
+        addNumber(key); // Числа (0-9)
+    } else if (key === ".") {
+        setPoint(); // Десятичная точка
+    } else if (key === "+" || key === "-" || key === "*" || key === "/") {
+        if (key === "/") 
+            key = "÷"
+        if (key === "*")
+            key = "×"
+        setOperation(key); // Операторы
+    } else if (key === "z") {
+        changeNumber("1/x");
+    } else if (key === "x") {
+        changeNumber("x²");
+    } else if (key === "c") {
+        changeNumber("√x");
+    } else if (key === "a") {
+        memorySave();
+    } else if (key === "s") {
+        memoryRead();
+    } else if (key === "Enter" || key === "=") {
+        event.preventDefault(); // Чтобы не срабатывал стандартный Enter
+        equals(); // Вычислить результат
+    } else if (key === "Backspace") {
+        erase(); // Удалить последний символ
+    } else if (key === "Escape") {
+        restart(); // Очистить всё
+    }
+});
 
 updateNumber()

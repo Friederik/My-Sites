@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="calculator.png">
-    <script src="main.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/key-support.js" defer></script>
+    <script src="scripts/language.js" defer></script>
     <title>Calculator</title>
 </head>
 <body>
@@ -13,7 +15,7 @@
         <div class="calculator">
             <div class="settings">
                 <div class="check">
-                    <label for="theme" class="change-theme">Темная тема</label>
+                    <label for="theme" class="change-theme" id="theme-text"></label>
                     <input type="checkbox" onclick="themeChange()" id="theme">
                 </div>
                 <img src="./logo.png" alt="logo" class="logo">
