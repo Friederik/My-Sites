@@ -35,31 +35,34 @@ function rounded() {
 }
 
 function equals() {
-    let symbol = expressionValue.slice(-1)
-    let curNumber = numberValue
-    switch(symbol) {
-        case '÷':
-            numberValue = String(Number(expressionValue.slice(0, -2)) / Number(numberValue))
-            expressionValue += ' ' + curNumber + ' ='
-            break
-        case '×':
-            numberValue = String(Number(numberValue) * Number(expressionValue.slice(0, -2)))
-            expressionValue += ' ' + curNumber + ' ='
-            break  
-        case '-':
-            numberValue = String(Number(expressionValue.slice(0, -2)) - Number(numberValue))
-            expressionValue += ' ' + curNumber + ' ='
-            break
-        case '+':
-            numberValue = String(Number(numberValue) + Number(expressionValue.slice(0, -2)))
-            expressionValue += ' ' + curNumber + ' ='
-            break       
+    if (numberValue.slice(-1) === '.') {
+        numberValue += '0'
     }
+    let operation = expressionValue.slice(-1)
+    let curNumber = numberValue
+    numberValue = doOperation(operation)
+    expressionValue += ' ' + curNumber + ' ='
     rounded()
     updateNumber()
 }
 
+function doOperation(operation) {
+    switch(operation) {
+        case '÷':
+            return String(Number(expressionValue.slice(0, -2)) / Number(numberValue))
+        case '×':
+            return String(Number(numberValue) * Number(expressionValue.slice(0, -2)))
+        case '-':
+            return String(Number(expressionValue.slice(0, -2)) - Number(numberValue))
+        case '+':
+            return String(Number(numberValue) + Number(expressionValue.slice(0, -2)))
+    }
+}
+
 function changeNumber(operation) {
+    if (numberValue.slice(-1) === '.') {
+        numberValue += '0'
+    }
     if (expressionValue.slice(-1) === '=') {
         expressionValue = ''
     }
@@ -84,42 +87,42 @@ function changeNumber(operation) {
 }
 
 function setOperation(operation) {
+    if (numberValue.slice(-1) === '.') {
+        numberValue += '0'
+    }
     if (expressionValue.slice(-1) === '=') {
         expressionValue = numberValue
         updateNumber()
     }
-    switch(operation) {
-        case '÷':
-            expressionValue = numberValue + ' ÷'
-            break
-        case '×':
-            expressionValue = numberValue + ' ×'
-            break  
-        case '-':
-            expressionValue = numberValue + ' -'
-            break
-        case '+':
-            expressionValue = numberValue + ' +'
-            break       
+    if (isCalc) {
+        let nextResult = doOperation(operation)
+        expressionValue = nextResult + ` ${operation}`
+        numberValue = nextResult
+    }
+    else {
+        expressionValue = numberValue + ` ${operation}`
     }
     isCalc = true
     updateNumber()
 }
 
 function setPoint() {
+    if (numberValue.indexOf('.') !== -1) {
+        return
+    }
     if (expressionValue.slice(-1) === '=') {
         numberValue = '0.'
         expressionValue = ''
     }
-    if (expressionValue.slice(-1) === '÷' ||
+    else if (expressionValue.slice(-1) === '÷' ||
     expressionValue.slice(-1) === '×' ||
     expressionValue.slice(-1) === '-' ||
     expressionValue.slice(-1) === '+') {
         numberValue = numberValue +  '.'
-        isCalc = false
     }
-    if (numberValue.indexOf('.') === -1)
+    else {
         numberValue += '.'
+    }
     updateNumber()
 }
 
@@ -147,11 +150,20 @@ function memorySave() {
 function restart() {
     numberValue = ''
     expressionValue = ''
+    isCalc = false
     updateNumber()
 }
 
 function erase() {
-    numberValue = numberValue.slice(0,-1)
+    if (expressionValue.slice(-1) === '=') {
+        expressionValue = ''
+    }
+    if (numberValue === "NaN" || numberValue === "Infinity") {
+        numberValue = ''
+    }
+    else {
+        numberValue = numberValue.slice(0,-1)
+    }
     updateNumber()
 }
 
