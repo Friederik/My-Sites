@@ -60,6 +60,9 @@ function equals() {
 }
 
 function changeNumber(operation) {
+    if (expressionValue.slice(-1) === '=') {
+        expressionValue = ''
+    }
     let curExpressionValue = expressionValue
     switch(operation) {
         case '1/x':
@@ -160,10 +163,6 @@ function updateNumber() {
 }
 
 function themeChange() {    
-
-    let btns = document.querySelectorAll('.btn')
-    let btnsDark = document.getElementsByClassName('btn-dark')
-
     if (document.querySelector('#theme').checked) {
         let btns = document.querySelectorAll('.btn')
         let inputs = document.querySelectorAll('.input')

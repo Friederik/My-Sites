@@ -11,6 +11,10 @@
 <body>
     <div class="wrapper">
         <div class="calculator">
+            <div class="settings">
+                <label for="theme">Темная тема</label>
+                <input type="checkbox" onclick="themeChange()" id="theme">
+            </div>
             <div class="display" id="display">
                 <input class="input" type="text" id="expression" disabled>
                 <input class="input" type="text" id="number" disabled>   
@@ -47,10 +51,7 @@
                 <button class="btn" onclick="equals()">=</button> <!---->
             </div>
         </div>
-        <div class="settings">
-            <label for="theme">Темная тема</label>
-            <input type="checkbox" onclick="themeChange()" id="theme">
-        </div>
+        
     </div>  
 </body>
 </html>

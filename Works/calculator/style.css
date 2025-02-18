@@ -19,6 +19,9 @@
     padding: 0.1rem;
     margin: auto;
     width: 25rem;
+    @media screen and (max-width: 800px) {
+        width: 20rem;
+    }
     background-color: gray;
 }
 
@@ -26,6 +29,9 @@
     padding: 0.1rem;
     margin: auto;
     width: 25rem;
+    @media screen and (max-width: 800px) {
+        width: 20rem;
+    }
     background-color:midnightblue;
 }
 
@@ -75,14 +81,12 @@
 }
 
 .settings {
-    position: absolute;
-    top:1rem;
-    left: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem 2rem 0;
 }
 
 .settings-dark {
-    position: absolute;
-    top:1rem;
-    left: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem 2rem 0;
     color: aliceblue;
 }
