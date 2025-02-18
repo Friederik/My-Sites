@@ -18,7 +18,6 @@ function addNumber(num) {
     expressionValue.slice(-1) === '-' ||
     expressionValue.slice(-1) === '+') && isCalc) {
         numberValue = ''
-        isCalc = false
     }
     if (numberValue === '0') {
         numberValue = String(num)    
@@ -35,18 +34,26 @@ function rounded() {
 }
 
 function equals() {
-    if (numberValue.slice(-1) === '.') {
-        numberValue += '0'
+    if (expressionValue.slice(-1) === '=') {
+        expressionValue = numberValue + ' ='
     }
-    let operation = expressionValue.slice(-1)
-    let curNumber = numberValue
-    numberValue = doOperation(operation)
-    expressionValue += ' ' + curNumber + ' ='
-    rounded()
+    else {
+        if (numberValue.slice(-1) === '.') {
+            numberValue += '0'
+        }
+        let operation = expressionValue.slice(-1)
+        let curNumber = numberValue
+        numberValue = doOperation(operation)
+        expressionValue += ' ' + curNumber + ' ='
+        rounded()
+    }
+    isCalc = false
     updateNumber()
 }
 
 function doOperation(operation) {
+    if (expressionValue === '') 
+        return numberValue
     switch(operation) {
         case '÷':
             return String(Number(expressionValue.slice(0, -2)) / Number(numberValue))
@@ -97,12 +104,13 @@ function setOperation(operation) {
     if (isCalc) {
         let nextResult = doOperation(operation)
         expressionValue = nextResult + ` ${operation}`
-        numberValue = nextResult
+        numberValue
     }
     else {
         expressionValue = numberValue + ` ${operation}`
     }
     isCalc = true
+    rounded()
     updateNumber()
 }
 
@@ -181,6 +189,7 @@ function themeChange() {
         document.querySelector('.calculator').className = 'calculator-dark'
         document.querySelector('.wrapper').className = 'wrapper-dark'
         document.querySelector('.settings').className = 'settings-dark'
+        document.querySelector('.operations').className = 'operations-dark'
         for (let input of inputs) {
             input.className = 'input-dark'
         }    
@@ -193,6 +202,7 @@ function themeChange() {
         document.querySelector('.calculator-dark').className = 'calculator'
         document.querySelector('.wrapper-dark').className = 'wrapper'
         document.querySelector('.settings-dark').className = 'settings'
+        document.querySelector('.operations-dark').className = 'operations'
         for (let input of inputs) {
             input.className = 'input'
         }    

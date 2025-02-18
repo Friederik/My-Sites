@@ -12,8 +12,11 @@
     <div class="wrapper">
         <div class="calculator">
             <div class="settings">
-                <label for="theme">Темная тема</label>
-                <input type="checkbox" onclick="themeChange()" id="theme">
+                <div class="check">
+                    <label for="theme" class="change-theme">Темная тема</label>
+                    <input type="checkbox" onclick="themeChange()" id="theme">
+                </div>
+                <img src="./logo.png" alt="logo" class="logo">
             </div>
             <div class="display" id="display">
                 <input class="input" type="text" id="expression" disabled>
