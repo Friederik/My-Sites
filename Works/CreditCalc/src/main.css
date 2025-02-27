@@ -23,16 +23,18 @@ body {
     height: 10rem;
 }
 
-
-#calculator {
-    padding: 3rem;
+@media print {
+    #calculator {
+        display: none;
+    }
 }
 
 #loan-form {
     border: solid gray;
     padding: 2.5rem;
     width: 30rem;
-    margin: auto;
+    margin: 3rem auto;
+    border-radius: 0.5rem;
 }
 
 .folder {
@@ -45,7 +47,8 @@ body {
     border: solid gray;
     padding: 2.5rem;
     width: 30rem;
-    margin: auto;
+    margin: 3rem auto;
+    border-radius: 0.5rem;
 }
 
 .conclusion-text {
@@ -56,15 +59,16 @@ body {
     width: 15rem;
 }
 
-#submit-button {
+.btn {
     width: 10rem;
     height: 3rem;
     font-family: var(--main-font-family);
     font-size: 1em;
+    margin: 0.1rem;
+    border-radius: 0.5rem;
 }
 
 .button-folder {
-    padding: 2rem;
     display: flex;
     justify-content: center;
 }
@@ -101,4 +105,39 @@ input::-webkit-inner-spin-button {
     font-family: var(--main-font-family);
     font-size: inherit;
     width: 3rem;
+}
+
+table {
+    font-size: 0.8em;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 2px;
+    text-align: left;
+}
+
+hr {
+    margin: 0.5rem;
+}
+
+.conclusion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#print-button {
+    background-color: seagreen;
+    height: 2rem;
+    @media print {
+        display: none;
+    }
+}
+
+#print-button:active {
+    background-color: green;
 }

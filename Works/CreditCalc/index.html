@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/main.css">
-    <script src="src/script.js" defer></script>
+    <script src="src/script.js" type="module" defer></script>
     <link rel="shortcut icon" href="src/images/icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
     <title>CreditCalc</title>
 </head>
 <body>
@@ -46,13 +48,21 @@
                 :</label>
                 <input class="loan-input" type="number" id="months" placeholder="Введите к. месяцев" required>
             </div>
+
+            <div class="folder" id="date-folder">
+                 <label for="date-credit">Дата выдачи:</label>
+                 <input class="loan-input" type="date" name="date-credit" id="date-credit" placeholder="Выберите дату" required>
+            </div>
         </div>
         <div class="button-folder" id="button-folder">
-            <button id="submit-button" type="button">Рассчитать</button>
+            <button class="btn" id="submit-button" type="button">Рассчитать</button>
         </div>
     </main>
     <section id="conclusion" style="display: none;">
-        <h1>Расчет</h1>
+        <header class="conclusion-header">
+            <h1>Расчет</h1>
+            <button class="btn" id="print-button" type="button">Печать</button>
+        </header>
         <div class="conclusion-text" id="sum-in-month">
             <p>Сумма платежа в месяц</p>
             <p id="sum-in-month-num">2</p>
@@ -73,6 +83,26 @@
             <p id="overpayment-percent-num">2</p>
             <span>%</span>
         </div>
+        <hr>
+        <table class="conclusion-table" id="conclusion-table">
+            <tr>
+                <th>Дата</th>
+                <th>Платеж</th>
+                <th>Процент</th>
+                <th>Основной долг</th>
+                <th>Остаток</th>
+            </tr>
+            <tr>
+                <td>27.02.2025</td>
+                <td>400</td>
+                <td>9999</td>
+            </tr>
+        </table>
+        
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#date-credit", {})
+    </script>
 </body>
 </html>
