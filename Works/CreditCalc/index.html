@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/main.css">
+    <script src="src/script.js" defer></script>
+    <link rel="shortcut icon" href="src/images/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>CreditCalc</title>
+</head>
+<body>
+    <header class="calc-header">
+        <img src="src/images/icon.png" alt="logo" id="logo">
+        <p id="name">Кредитный калькулятор</p>
+    </header>
+    <main id="calculator">
+        <div id="loan-form">
+            
+            <div class="folder" id="amount-folder">
+                <label>Сумма кредита
+                    <span>
+                        <select name="currency" id="currency">
+                            <option value="rub">₽</option>
+                            <option value="dlr">$</option>
+                            <option value="eur">€</option>
+                        </select>
+                    </span>
+                :</label>
+                <input class="loan-input" type="number" id="amount" placeholder="Введите сум. кредита" required>
+            </div>
+            
+            <div class="folder" id="rate-folder">
+                <label>Процентная ставка (%):</label>
+                <input class="loan-input" type="number" id="rate" placeholder="Введите процент" required>
+            </div>
+            
+            <div class="folder" id="months-folder">
+                <label>Срок
+                    <span>
+                        <select name="range" id="range">
+                            <option value="months">в месяцах</option>
+                            <option value="years">в годах</option>
+                        </select>
+                    </span>
+                :</label>
+                <input class="loan-input" type="number" id="months" placeholder="Введите к. месяцев" required>
+            </div>
+        </div>
+        <div class="button-folder" id="button-folder">
+            <button id="submit-button" type="button">Рассчитать</button>
+        </div>
+    </main>
+    <section id="conclusion" style="display: none;">
+        <h1>Расчет</h1>
+        <div class="conclusion-text" id="sum-in-month">
+            <p>Сумма платежа в месяц</p>
+            <p id="sum-in-month-num">2</p>
+            <span class="currency-val">₽</span>
+        </div>
+        <div class="conclusion-text" id="sum-all">
+            <p>Сумма всех платежей</p>
+            <p id="sum-all-num">2</p>
+            <span class="currency-val">₽</span>
+        </div>
+        <div class="conclusion-text" id="overpayment">
+            <p>Переплата</p>
+            <p id="overpayment-num">2</p>
+            <span class="currency-val">₽</span>
+        </div>
+        <div class="conclusion-text" id="overpayment-percent">
+            <p></p>
+            <p id="overpayment-percent-num">2</p>
+            <span>%</span>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,104 @@
+* {
+    --main-font-family: "Overpass", serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--main-font-family);
+    font-size: 20px;
+}
+
+.calc-header {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 1rem 5rem;
+    font-size: 1.5em;
+    font-weight: 900;
+    box-shadow: 0 0.1rem 0.2rem grey;
+}
+
+#logo {
+    height: 10rem;
+}
+
+
+#calculator {
+    padding: 3rem;
+}
+
+#loan-form {
+    border: solid gray;
+    padding: 2.5rem;
+    width: 30rem;
+    margin: auto;
+}
+
+.folder {
+    padding: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#conclusion {
+    border: solid gray;
+    padding: 2.5rem;
+    width: 30rem;
+    margin: auto;
+}
+
+.conclusion-text {
+    display: flex;
+}
+
+.conclusion-text p:first-child {
+    width: 15rem;
+}
+
+#submit-button {
+    width: 10rem;
+    height: 3rem;
+    font-family: var(--main-font-family);
+    font-size: 1em;
+}
+
+.button-folder {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.loan-input {
+    font-family: var(--main-font-family);   
+    text-align: end;
+    font-size: 1em;
+    padding: 0.1em;
+    border-radius: 0.2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.loan-input-error {
+    font-family: var(--main-font-family);   
+    text-align: end;
+    font-size: 1em;
+    padding: 0.1em;
+    border-radius: 0.2rem;
+    border-color: red;
+}
+
+#range {
+    font-family: var(--main-font-family);
+    font-size: inherit;
+}
+
+#currency {
+    font-family: var(--main-font-family);
+    font-size: inherit;
+    width: 3rem;
+}

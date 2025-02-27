@@ -4,7 +4,6 @@ button.onclick = addTask
 
 function addTask() {
     const input = document.getElementById('task-name')
-    document.getel
     if (input.value === '') {
         console.log('Пусто')
     }
@@ -73,14 +72,16 @@ async function render() {
 render()
 
 function getTask(task) {
-    const div = document.createElement('div')
+    const div = document.createElement('article')
     div.className = task.completed === "true" ? 'completed-task' : 'task'
     div.id = task.id
 
     div.innerHTML = `
         <p>${task.text}</p>
-        <button class="task-done" data-index=${task.id} data-type="complete">+</button>
-        <button class="task-delete"data-index=${task.id} data-type="remove">-</button>
+        <div class="btns">
+            <button class="task-done" data-index=${task.id} data-type="complete">+</button>
+            <button class="task-delete"data-index=${task.id} data-type="remove">-</button>
+        </div>
     `
 
     div.onclick = function(event) {
