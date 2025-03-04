@@ -42,7 +42,7 @@ function calculateLoan(amountObj, rateObj, monthsObj, rangeObj, dateCreditObj) {
     let amount = amountObj.value;
     let rate = rateObj.value;
     let months = monthsObj.value;
-    let dateCredit = dateCreditObj.value;
+    let dateCredit = new Date(dateCreditObj.value);
 
     let numbers = [amountObj, rateObj, monthsObj, dateCreditObj]
 
@@ -74,10 +74,10 @@ function calculateLoan(amountObj, rateObj, monthsObj, rangeObj, dateCreditObj) {
     document.getElementById("print-button").style.color = "white"
 
     console.log(amount)
-    calculateLoanTable(months, monthlyRate, payment, amount)
+    calculateLoanTable(months, monthlyRate, payment, amount, dateCredit)
 }
 
-function calculateLoanTable(months, monthlyRate, payment, amount) {
+function calculateLoanTable(months, monthlyRate, payment, amount, dateCredit) {
     document.getElementById('conclusion-table').innerHTML = `
         <tr>
             <th>Дата</th>
@@ -87,20 +87,40 @@ function calculateLoanTable(months, monthlyRate, payment, amount) {
             <th>Остаток</th>
         </tr>        
     `
+    let calcDate = new Date(dateCredit)
+    let nextDate = dateCredit.getMonth() + 1
+    let originalDay = dateCredit.getDate()
+
     for(let i = 0; i < months; i++) {
         let row = document.createElement('tr')
 
-        let percents = (amount * monthlyRate).toFixed(0)
+        let percents = (amount * monthlyRate).toFixed(2)
         let mainCredit = (payment - percents).toFixed(0)
         if(i === months-1) {
             mainCredit = amount
             payment = mainCredit * (1 + monthlyRate).toFixed(0)
         }
         amount -= mainCredit
-        console.log(i, months-1,monthlyRate, amount,percents, mainCredit)
+
+        let newMonth = nextDate + i;
+        let oldDate = new Date(calcDate)
+        calcDate.setFullYear(dateCredit.getFullYear() + Math.floor(newMonth / 12)); // Коррекция года
+        calcDate.setMonth(newMonth % 12);
+        if (calcDate.getDate() < 5) {
+            calcDate.setDate(0);
+        }
+        else {
+            calcDate.setDate(originalDay)
+        }
+        if (calcDate.getMonth() === oldDate.getMonth()) {
+            calcDate.setDate(originalDay)
+            calcDate.setMonth(calcDate.getMonth() + 1)
+        }
+        console.log(calcDate, oldDate)
+        let formattedDate = calcDate.toLocaleDateString("ru-RU")
 
         row.innerHTML = `
-            <td>27.${i}.2025</td>
+            <td>${formattedDate}</td>
             <td>${payment}</td>
             <td>${percents}</td>
             <td>${mainCredit}</td>

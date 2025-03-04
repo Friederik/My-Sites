@@ -1,5 +1,7 @@
 const button = document.getElementById('add-task')
 
+const url = 'http://localhost:3000/tasks'
+
 button.onclick = addTask
 
 function addTask() {
@@ -17,7 +19,7 @@ async function createTask(taskName) {
         "text": `${taskName}`,
         "completed": "false" 
     }
-    await fetch('http://localhost:3000/tasks', {
+    await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'applycation/json'
@@ -29,12 +31,12 @@ async function createTask(taskName) {
 }
 
 async function changeCompleted(id) {
-    fetch(`http://localhost:3000/tasks/${id}`)
+    fetch(`${url}/${id}`)
     .then(res => res.json())
     .then(task => {
         let isCompleted = task.completed === 'true' ? 'false' : 'true'
         console.log(isCompleted)
-        fetch(`http://localhost:3000/tasks/${id}`, {
+        fetch(`${url}/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'applycation/json'
@@ -45,7 +47,7 @@ async function changeCompleted(id) {
 }
 
 async function deleteTask(id) {
-    fetch(`http://localhost:3000/tasks/${id}`, {
+    fetch(`${url}/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'applycation/json'
@@ -54,7 +56,7 @@ async function deleteTask(id) {
 }
 
 async function render() {
-    let response = await fetch('http://localhost:3000/tasks');
+    let response = await fetch(url);
 
     if (response.ok) { 
         let data = await response.json();

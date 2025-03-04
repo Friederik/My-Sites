@@ -6,6 +6,7 @@
 
 body {
     font-family: var(--main-font-family);
+    font-family: monospace;
     font-size: 20px;
 }
 
@@ -117,7 +118,7 @@ table {
 th,
 td {
     padding: 2px;
-    text-align: left;
+    text-align: center;
 }
 
 hr {
